@@ -1,9 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import NoteApp from "../src/pages/NoteApp";
-
-// import style
-import "../src/styles/style.css";
+import "../src/index.css";
 
 const root = createRoot(document.getElementById("root"));
 root.render(<NoteApp />);
