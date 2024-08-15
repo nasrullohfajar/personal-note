@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import NoteInput from "../components/NoteInput";
 import NoteList from "../components/NoteList";
+import CreateButton from "../components/CreateButton";
+import { FaStickyNote } from "react-icons/fa";
 
 const NoteApp = () => {
   const [notes, setNotes] = useState([]);
@@ -36,8 +38,12 @@ const NoteApp = () => {
   return (
     <>
       <div className="note-app__header">
-        <h1>Personal Notes</h1>
+        <h1 className="flex flex-row gap-x-2 items-center">
+          <FaStickyNote /> Personal Notes
+        </h1>
       </div>
+
+      <CreateButton />
 
       <div className="note-app__body note-input">
         <h2>Buat Catatan</h2>
