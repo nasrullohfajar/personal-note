@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import NoteInput from "../components/NoteInput";
-import NoteList from "../components/NoteList";
-import CreateButton from "../components/CreateButton";
+import NoteInput from "../components/note/NoteInput";
+import NoteList from "../components/note/NoteList";
+import CreateButton from "../components/button/CreateButton";
 import { FaStickyNote } from "react-icons/fa";
 
 const NoteApp = () => {

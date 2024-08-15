@@ -1,5 +1,5 @@
 import React from "react";
-import NoteItem from "./NoteItem";
+import NoteInput from "./NoteInput";
 
 function NoteList({ notes, onDelete }) {
   return notes.length > 0 ? (
