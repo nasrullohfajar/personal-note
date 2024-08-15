@@ -3,9 +3,11 @@ import NoteInput from "../components/note/NoteInput";
 import NoteList from "../components/note/NoteList";
 import CreateButton from "../components/button/CreateButton";
 import { FaStickyNote } from "react-icons/fa";
+import Modal from "../components/modal";
 
 const NoteApp = () => {
   const [notes, setNotes] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const storedNotes = localStorage.getItem("notes");
@@ -16,6 +18,7 @@ const NoteApp = () => {
 
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(notes));
+    setIsOpen(false);
   }, [notes]);
 
   const onDeleteHandler = (id) => {
@@ -35,6 +38,12 @@ const NoteApp = () => {
     ]);
   };
 
+  const isOpenHandler = () => {
+    setIsOpen(!isOpen);
+  };
+
+  console.log(isOpen);
+
   return (
     <>
       <div className="note-app__header">
@@ -43,12 +52,13 @@ const NoteApp = () => {
         </h1>
       </div>
 
-      <CreateButton />
+      <CreateButton onClick={isOpenHandler} />
 
-      <div className="note-app__body note-input">
-        <h2>Buat Catatan</h2>
-        <NoteInput addNote={onAddNoteHandler} />
-      </div>
+      <Modal
+        isOpen={isOpen}
+        addNote={onAddNoteHandler}
+        isOpenHandler={isOpenHandler}
+      />
 
       <div className="note-app__body">
         <h2>Catatan</h2>
