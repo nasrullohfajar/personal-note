@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import NoteInput from "../components/note/NoteInput";
 import NoteList from "../components/note/NoteList";
 import CreateButton from "../components/button/CreateButton";
-import { FaStickyNote } from "react-icons/fa";
+import { PiNotebookFill } from "react-icons/pi";
 import Modal from "../components/Modal";
 
 const NoteApp = () => {
@@ -47,8 +46,8 @@ const NoteApp = () => {
   return (
     <>
       <div className="note-app__header">
-        <h1 className="flex flex-row gap-x-2 items-center">
-          <FaStickyNote /> Personal Notes
+        <h1 className="flex flex-row gap-x-1 items-center">
+          <PiNotebookFill size={22} /> Personal Notes
         </h1>
       </div>
 
