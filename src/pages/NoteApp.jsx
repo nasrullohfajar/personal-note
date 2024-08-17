@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import NoteInput from "../components/note/NoteInput";
 import NoteList from "../components/note/NoteList";
 import CreateButton from "../components/button/CreateButton";
-import { FaStickyNote } from "react-icons/fa";
-import Modal from "../components/modal";
+import { PiNotebookFill } from "react-icons/pi";
+import Modal from "../components/Modal";
 
 const NoteApp = () => {
   const [notes, setNotes] = useState([]);
