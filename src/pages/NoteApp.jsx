@@ -47,9 +47,7 @@ const NoteApp = () => {
   return (
     <>
       <div className="note-app__header">
-        <h1 className="flex flex-row gap-x-2 items-center">
-          <FaStickyNote /> Personal Notes
-        </h1>
+        <h1 className="text-xl">Personal Notes</h1>
       </div>
 
       <CreateButton onClick={isOpenHandler} />
