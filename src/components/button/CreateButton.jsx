@@ -1,13 +1,13 @@
 import React from "react";
-import { FaPlus } from "react-icons/fa";
+import { MdCreateNewFolder } from "react-icons/md";
 
 function CreateButton({ onClick }) {
   return (
     <button
-      className=" flex flex-row items-center justify-center border rounded-lg p-2 m-5 ml-auto "
+      className=" flex flex-row items-center justify-center gap-x-2"
       onClick={onClick}
     >
-      <FaPlus /> Tambah Catatan
+      <MdCreateNewFolder size={17} /> Add New
     </button>
   );
 }

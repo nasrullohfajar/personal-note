@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import NoteList from "../components/note/NoteList";
 import CreateButton from "../components/button/CreateButton";
-import { PiNotebookFill } from "react-icons/pi";
 import Modal from "../components/Modal";
 
 const NoteApp = () => {
@@ -47,9 +46,8 @@ const NoteApp = () => {
     <>
       <div className="note-app__header">
         <h1 className="text-xl">Personal Notes</h1>
+        <CreateButton onClick={isOpenHandler} />
       </div>
-
-      <CreateButton onClick={isOpenHandler} />
 
       <Modal
         isOpen={isOpen}
