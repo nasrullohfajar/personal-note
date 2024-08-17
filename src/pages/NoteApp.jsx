@@ -45,7 +45,7 @@ const NoteApp = () => {
   return (
     <>
       <div className="note-app__header">
-        <h1 className="text-xl">Personal Notes</h1>
+        <h1 className="text-xl">Personal Note</h1>
         <CreateButton onClick={isOpenHandler} />
       </div>
 
