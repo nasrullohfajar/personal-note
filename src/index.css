@@ -105,6 +105,10 @@ textarea::placeholder {
   cursor: pointer;
 }
 
+.note-input button:hover {
+  background-color: #2c666a;
+}
+
 .notes-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -125,7 +129,6 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
   background-color: white;
-  box-shadow: 3px 3px 10px #bababaee;
 }
 
 .note-item__content {
@@ -181,7 +184,7 @@ textarea::placeholder {
 }
 
 .note-item__delete-button:hover {
-  background-color: #2f6f74;
+  background-color: #2c666a;
 }
 
 .error-message {
