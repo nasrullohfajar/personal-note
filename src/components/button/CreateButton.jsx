@@ -7,7 +7,7 @@ function CreateButton({ onClick }) {
       className=" flex flex-row items-center justify-center gap-x-2"
       onClick={onClick}
     >
-      <MdCreateNewFolder size={17} /> Add New
+      <MdCreateNewFolder size={17} /> Tambah
     </button>
   );
 }
