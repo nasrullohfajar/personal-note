@@ -5,13 +5,18 @@ import { IoIosClose } from "react-icons/io";
 function Modal({ isOpen, addNote, isOpenHandler }) {
   return (
     isOpen && (
-      <div className=" p-12 absolute inset-x-0 mt-20 items-center justify-center bg-white shadow-md rounded-xl m-auto max-w-[500px]">
-        <button className="w-full " onClick={isOpenHandler}>
-          <IoIosClose className="ml-auto" size={24} />
-        </button>
-        <h2 className="my-4">Buat Catatan</h2>
-        <NoteInput addNote={addNote} />
-      </div>
+      <>
+        <div className="absolute top-0 left-0 bg-black opacity-40 w-full h-screen"></div>
+        <div className="p-8 absolute inset-x-0 mt-20 items-center justify-center bg-white shadow-md rounded-xl max-w-[500px] mx-12 lg:mx-auto">
+          <button
+            className="w-full hover:text-green-200"
+            onClick={isOpenHandler}
+          >
+            <IoIosClose className="ml-auto" size={32} />
+          </button>
+          <NoteInput addNote={addNote} />
+        </div>
+      </>
     )
   );
 }

@@ -44,7 +44,7 @@ const NoteApp = () => {
 
   return (
     <>
-      <div className="note-app__header">
+      <div className="flex items-center justify-between px-8 py-3 bg-green-100 text-white-100 border-b-1 shadow-md">
         <h1 className="text-xl">Personal Note</h1>
         <CreateButton onClick={isOpenHandler} />
       </div>
@@ -55,8 +55,8 @@ const NoteApp = () => {
         isOpenHandler={isOpenHandler}
       />
 
-      <div className="note-app__body">
-        <h2>Catatan</h2>
+      <div className="max-w-[1000px] my-4 mx-auto p-3">
+        <h2 className="text-lg mb-4 mx-24 lg:mx-0">Catatan</h2>
         <NoteList notes={notes} onDelete={onDeleteHandler} />
       </div>
     </>

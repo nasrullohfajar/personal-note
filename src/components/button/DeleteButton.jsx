@@ -2,7 +2,10 @@ import React from "react";
 
 function DeleteButton({ id, onDelete }) {
   return (
-    <button className="note-item__delete-button" onClick={() => onDelete(id)}>
+    <button
+      className="w-full p-2 bg-green-100 hover:bg-green-200 text-white "
+      onClick={() => onDelete(id)}
+    >
       Delete
     </button>
   );

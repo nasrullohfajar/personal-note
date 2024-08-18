@@ -16,10 +16,12 @@ function NoteItemBody({ title, body, createdAt }) {
   console.log(createdAt);
 
   return (
-    <div className="note-item__content">
-      <h3 className="note-item__title">{title}</h3>
-      <p className="note-item__date">{formattedDateString}</p>
-      <p className="note-item__body">{body}</p>
+    <div className="p-3 flex-1">
+      <h3 className="text-ellipsis overflow-hidden whitespace-nowrap mb-2">
+        {title}
+      </h3>
+      <p className="text-xs mb-2 text-white-200">{formattedDateString}</p>
+      <p className="text-sm">{body}</p>
     </div>
   );
 }

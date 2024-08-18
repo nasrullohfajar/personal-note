@@ -55,7 +55,7 @@ const NoteInput = ({ addNote }) => {
   );
 
   return (
-    <form className="note-input" onSubmit={onSubmitEventHandler}>
+    <form className="mx-auto max-w-[500px]" onSubmit={onSubmitEventHandler}>
       <div className="form-group">
         <label htmlFor="title">Judul Catatan</label>
         <input
@@ -64,8 +64,11 @@ const NoteInput = ({ addNote }) => {
           placeholder="Tuliskan judul catatan.."
           value={title}
           onChange={onTitleChangeEventHandler}
+          className="w-full p-3 my-3 border rounded-lg focus:outline-none"
         />
-        {titleError && <span className="error-message">{titleError}</span>}
+        {titleError && (
+          <span className="text-sm text-red-100">{titleError}</span>
+        )}
       </div>
       <div className="form-group">
         <label htmlFor="body">Isi Catatan</label>
@@ -74,10 +77,16 @@ const NoteInput = ({ addNote }) => {
           placeholder="Tuliskan catatanmu disini.."
           value={body}
           onChange={onBodyChangeEventHandler}
+          className="w-full h-52 resize-none p-3 my-3 border rounded-lg focus:outline-none"
         />
-        {bodyError && <span className="error-message">{bodyError}</span>}
+        {bodyError && <span className="text-sm text-red-100">{bodyError}</span>}
       </div>
-      <button type="submit">Buat</button>
+      <button
+        type="submit"
+        className="w-full p-3 text-white-100 bg-green-100 border rounded-lg hover:bg-green-200"
+      >
+        Buat
+      </button>
     </form>
   );
 };
